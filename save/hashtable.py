@@ -6,9 +6,7 @@ class hashtable_user:
 
     def add(self, key, value):
         hashed_key = hash(key)
-        print(hashed_key)
         indice_bucket = hashed_key % len(self.buckets)
-        print(indice_bucket)
         self.buckets[indice_bucket].append((key, value))
 
     def get(self, key):
